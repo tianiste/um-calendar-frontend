@@ -1,0 +1,404 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><title>UM Calendar</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#6ffbbe", "secondary-container": "#00a572", "error-container": "#93000a", "error": "#ffb4ab", "outline": "#8c909f", "on-secondary": "#003824", "on-error": "#690005", "on-secondary-fixed-variant": "#005236", "on-secondary-fixed": "#002113", "outline-variant": "#424754", "on-tertiary-fixed-variant": "#5516be", "secondary-fixed-dim": "#4edea3", "surface-container-low": "#131b2e", "surface-container-highest": "#2d3449", "on-primary-container": "#00285d", "on-tertiary-fixed": "#23005c", "primary-fixed-dim": "#adc6ff", "surface-container-lowest": "#060e20", "on-background": "#dae2fd", "on-error-container": "#ffdad6", "on-surface-variant": "#c2c6d6", "inverse-on-surface": "#283044", "primary-fixed": "#d8e2ff", "primary": "#adc6ff", "tertiary-fixed": "#e9ddff", "surface-variant": "#2d3449", "tertiary": "#d0bcff", "surface-dim": "#0b1326", "tertiary-container": "#a078ff", "on-tertiary-container": "#340080", "on-primary": "#002e6a", "surface": "#0b1326", "surface-container-high": "#222a3d", "on-secondary-container": "#00311f", "inverse-surface": "#dae2fd", "secondary": "#4edea3", "on-tertiary": "#3c0091", "tertiary-fixed-dim": "#d0bcff", "surface-tint": "#adc6ff", "background": "#0b1326", "on-primary-fixed-variant": "#004395", "on-surface": "#dae2fd", "surface-container": "#171f33", "surface-bright": "#31394d", "on-primary-fixed": "#001a42", "primary-container": "#4d8eff", "inverse-primary": "#005ac2" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-48": "3rem", "space-32": "2rem", "space-8": "0.5rem", "space-20": "1.25rem", "gutter-desktop": "1.25rem", "touch-target-min": "2.75rem", "space-16": "1rem", "space-2": "0.125rem", "space-24": "1.5rem", "gutter-mobile": "0.75rem", "space-4": "0.25rem", "space-12": "0.75rem" }, fontFamily: { "title-sm": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "tabular-time": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "display": ["Inter"], "headline-md": ["Inter"] }, fontSize: { "title-sm": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "tabular-time": ["13px", { "lineHeight": "16px", "letterSpacing": "0", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script></head><body class="bg-background text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)] pt-safe"><div class="h-48 max-w-7xl mx-auto px-gutter-mobile md:px-gutter-desktop flex flex-col justify-between py-space-8"><div class="flex items-center justify-between gap-space-12"><div class="flex items-center gap-space-8 min-w-0"><img alt="UM Calendar Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1V3YhVLrcg7TKGqMgN_0AHh0CHT6y5Hx_VOQv9Rhb0mWjl3kD5_UpoWP3juuGhFahOCy_bFkWaPhVjyACiqvUSs7j9brMeJ0c4zI3XhKZJBgX2Tz6pgVtNx2hmqPLBvF8nUd3H2Q0uYBRjL37xoYP0xJnkXHfLOl45_Gr6mG9UxQots1srU1LIyoBNts4ed382gh2XTMtOocyTZbKSGy9J-rHIY_BvluuN1XK2a2d5eRT5ns8GIrT0gcI2i"><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-8"><span class="font-title-sm text-title-sm text-on-surface tracking-tight truncate">UM Calendar</span><span class="hidden sm:inline-block px-space-8 py-space-2 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">2024/2025</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">FERI Maribor</span></div></div><div class="flex items-center gap-space-8 flex-shrink-0"><!-- Language Switcher --><div class="flex items-center bg-surface-container-high p-1 rounded-xl"><button class="h-7 px-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold transition-all" type="button">EN</button><button class="h-7 px-2.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-all" type="button">SLO</button></div><button aria-label="Toggle Light/Dark Theme" class="w-touch-target-min h-touch-target-min rounded-xl bg-surface-container-high hover:bg-surface-container-highest active:scale-95 text-on-surface flex items-center justify-center transition-all" onclick="document.documentElement.classList.toggle('dark')" type="button"><span class="material-symbols-outlined text-[20px] dark:hidden">light_mode</span><span class="material-symbols-outlined text-[20px] hidden dark:inline-block">dark_mode</span></button></div></div><div class="flex items-center justify-between gap-space-12"><button class="flex-1 h-touch-target-min min-w-0 px-space-12 rounded-xl bg-surface-container hover:bg-surface-container-high active:scale-[0.99] flex items-center justify-between text-left transition-all" type="button"><div class="flex items-center gap-space-8 min-w-0"><span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">school</span><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Study Programme</span><span class="font-label-md text-label-md text-on-surface truncate font-semibold">Informatics &amp; Technologies (VS) – 1st Year</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px] flex-shrink-0 ml-space-4">expand_more</span></button><div class="flex items-center bg-surface-container-low p-space-2 rounded-xl flex-shrink-0"><a class="h-8 px-space-12 rounded-lg flex items-center justify-center font-label-md text-label-md transition-all bg-primary-container text-on-primary-container font-medium" data-path="timetable-week" href="#">Week</a><a class="h-8 px-space-12 rounded-lg flex items-center justify-center font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface font-medium" data-path="timetable-month" href="#">Month</a></div></div><div class="flex items-center gap-space-8 overflow-x-auto no-scrollbar py-space-2"><button class="h-8 px-space-12 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold flex items-center gap-space-4 flex-shrink-0 transition-all" type="button"><span class="w-1.5 h-1.5 rounded-full bg-on-primary-container"></span>All Groups</button><button class="h-8 px-space-12 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-space-4 flex-shrink-0 transition-all" type="button">Group 1</button><button class="h-8 px-space-12 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-space-4 flex-shrink-0 transition-all" type="button">Group 2</button><button class="h-8 px-space-12 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-space-4 flex-shrink-0 transition-all" type="button">Group 3</button><button class="h-8 px-space-12 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-space-4 flex-shrink-0 transition-all" type="button">Group 4</button><button class="h-8 px-space-12 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-space-4 flex-shrink-0 transition-all" type="button">Group 5</button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-48 pb-28 bg-background"><div class="w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter-desktop flex-1 flex flex-col"><div class="flex flex-col w-full pb-space-24">
+<!-- Week Overview Bar -->
+<div class="w-full bg-surface-container rounded-xl p-space-16 mb-space-16 shadow-md flex flex-col gap-space-12">
+<div class="flex items-center justify-between gap-space-8">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-4">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_view_week</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight truncate">Mar 24 – Mar 30, 2025</h2>
+</div>
+<p class="font-label-sm text-label-sm text-secondary flex items-center gap-space-4 mt-space-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+          Today is Tuesday, March 25, 2025
+        </p>
+</div>
+<!-- Quick Nav Buttons -->
+<div class="flex items-center gap-space-4 shrink-0 bg-surface-container-low p-space-2 rounded-lg">
+<button aria-label="Previous week" class="w-8 h-8 rounded bg-surface-container-high hover:bg-surface-bright active:scale-95 text-on-surface flex items-center justify-center transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="h-8 px-space-8 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm active:scale-95 transition-transform" type="button">
+          This week
+        </button>
+<button aria-label="Next week" class="w-8 h-8 rounded bg-surface-container-high hover:bg-surface-bright active:scale-95 text-on-surface flex items-center justify-center transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Segmented Toggle: Month / Week -->
+<div class="grid grid-cols-2 bg-surface-container-lowest p-space-2 rounded-xl">
+<button class="h-touch-target-min flex items-center justify-center gap-space-8 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+        Month
+      </button>
+<button class="h-touch-target-min flex items-center justify-center gap-space-8 rounded-lg bg-surface-container-high text-primary shadow-sm font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">view_week</span>
+        Week
+      </button>
+</div>
+<!-- Active Group Filter Badge -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-8 bg-surface-container-low px-space-12 py-space-8 rounded-lg"><div class="flex items-center gap-space-8 min-w-0"><div class="inline-flex items-center gap-space-4 px-space-8 py-space-2 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shrink-0"><span class="material-symbols-outlined text-[14px]">filter_alt</span><span class="">Filter: Group 2</span><button aria-label="Remove filter" class="hover:opacity-75 ml-space-2" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Other groups dimmed</span></div><div class="flex items-center gap-space-8 shrink-0"><button type="button" onclick="toggleAllDays(false)" class="font-label-sm text-label-sm text-primary hover:text-on-surface bg-surface-container-high px-space-8 py-space-2 rounded transition-colors">Collapse all</button><button type="button" onclick="toggleAllDays(true)" class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface bg-surface-container-high px-space-8 py-space-2 rounded transition-colors">Expand all</button><span class="font-tabular-time text-tabular-time text-on-surface-variant hidden sm:inline-block ml-space-4">14 classes</span></div></div>
+</div>
+<!-- Agenda Chronological Day Stream -->
+<div class="flex flex-col gap-space-16" id="weekly-accordion-stream">
+<!-- Day 1: Monday (Collapsible) -->
+<section class="day-accordion flex flex-col gap-space-8 rounded-2xl transition-all" data-day="monday">
+<button class="day-toggle w-full flex items-center justify-between p-space-12 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all text-left shadow-sm active:scale-[0.99]" type="button" aria-expanded="true" onclick="toggleDay(this)">
+<div class="flex items-center gap-space-8 min-w-0">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center font-title-sm text-title-sm">24</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Monday, Mar 24</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 lectures • 1 laboratory exercise</span>
+</div>
+</div>
+<div class="flex items-center gap-space-8">
+<span class="day-count-badge hidden px-space-8 py-space-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">3 classes</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200 chevron-icon">expand_less</span>
+</div>
+</button>
+<div class="day-content flex flex-col gap-space-8 pl-space-8 transition-all">
+<!-- Event Card: Lecture -->
+<article class="relative flex flex-col bg-surface-container-low rounded-xl p-space-12 shadow-sm overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container"></div>
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex items-center gap-space-4 text-primary font-tabular-time text-tabular-time">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="">08:15 – 10:00</span>
+</div>
+<span class="px-space-8 py-space-2 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+📚 Lecture (L)
+</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface mt-space-8 truncate">Databases</h3>
+<div class="flex items-center gap-space-12 mt-space-8 pt-space-8 bg-surface-container-highest/30 rounded px-space-8"><div class="flex items-center gap-space-4 text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-error text-[16px]">location_on</span><span class="">G2-Alfa</span></div></div>
+</article>
+<!-- Event Card: Lab (Selected Group) -->
+<article class="relative flex flex-col bg-surface-container-low rounded-xl p-space-12 shadow-sm overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex items-center gap-space-4 text-secondary font-tabular-time text-tabular-time">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="">10:15 – 12:00</span>
+</div>
+<div class="flex items-center gap-space-4">
+<span class="px-space-8 py-space-2 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+💻 Lab / Tutorial (Lab)
+</span>
+</div>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface mt-space-8 truncate">Databases (Group 2)</h3>
+<div class="flex items-center gap-space-12 mt-space-8 pt-space-8 bg-surface-container-highest/30 rounded px-space-8"><div class="flex items-center gap-space-4 text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-error text-[16px]">location_on</span><span class="">Lab 301</span></div></div>
+</article>
+<!-- Event Card: Dimmed Group 1 -->
+<article class="relative flex flex-col bg-surface-container-lowest/60 rounded-xl p-space-12 opacity-40 shadow-sm overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline-variant"></div>
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex items-center gap-space-4 text-on-surface-variant font-tabular-time text-tabular-time">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="">12:15 – 14:00</span>
+</div>
+<span class="px-space-8 py-space-2 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Group 1 (Other study group)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface-variant mt-space-8 truncate">Databases (Group 1)</h3>
+<div class="flex items-center gap-space-4 text-on-surface-variant font-label-md text-label-md mt-space-4"><span class="material-symbols-outlined text-[16px]">meeting_room</span><span class="">Lab 301</span></div>
+</article>
+</div>
+</section>
+
+<!-- Day 2: Tuesday (TODAY - Open & Highlighted by default) -->
+<section class="day-accordion flex flex-col gap-space-8 bg-surface-container-high/40 p-space-8 rounded-2xl transition-all" data-day="tuesday" id="today-section">
+<button class="day-toggle w-full flex items-center justify-between p-space-12 rounded-xl bg-primary text-on-primary transition-transform active:scale-[0.99] text-left shadow-lg" type="button" aria-expanded="true" onclick="toggleDay(this)">
+<div class="flex items-center gap-space-12 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-on-primary/15 flex flex-col items-center justify-center font-headline-md text-headline-md leading-none">
+<span class="text-on-primary">25</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-8">
+<span class="font-title-sm text-title-sm text-on-primary">Tuesday, Mar 25</span>
+<span class="px-space-8 py-space-2 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold animate-pulse">TODAY</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-primary/80">3 lectures • 1 online seminar</span>
+</div>
+</div>
+<div class="flex items-center gap-space-4 text-on-primary font-label-sm text-label-sm">
+<span class="day-count-badge hidden font-semibold mr-space-4">4 events</span>
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200 chevron-icon">expand_less</span>
+</div>
+</button>
+<div class="day-content flex flex-col gap-space-8 transition-all">
+<!-- Live Now Bar -->
+<div class="flex items-center justify-between bg-error-container/40 px-space-12 py-space-8 rounded-xl mx-space-4">
+<div class="flex items-center gap-space-8">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-md text-label-md text-on-error-container font-semibold">CURRENT CLASS:</span>
+</div>
+<span class="font-tabular-time text-tabular-time text-error">Remaining 35 min</span>
+</div>
+<div class="flex flex-col gap-space-8 pl-space-4">
+<!-- Event Card: Active Now -->
+<article class="relative flex flex-col bg-surface-container rounded-xl p-space-12 shadow-md overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex items-center gap-space-4 text-error font-tabular-time text-tabular-time font-semibold">
+<span class="material-symbols-outlined text-[16px]">alarm_on</span>
+<span class="">10:00 – 12:30</span>
+</div>
+<span class="px-space-8 py-space-2 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">📚 Lecture (L)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface mt-space-8 truncate">Programming 2</h3>
+<div class="flex items-center justify-between mt-space-8 pt-space-8 bg-surface-container-highest/40 rounded px-space-8"><div class="flex items-center gap-space-4 text-on-surface font-label-md text-label-md"><span class="material-symbols-outlined text-error text-[18px]">location_on</span><span class="font-semibold">G2-Beta</span></div></div>
+</article>
+<!-- Event Card: Online Lecture -->
+<article class="relative flex flex-col bg-surface-container rounded-xl p-space-12 shadow-sm overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex items-center gap-space-4 text-tertiary font-tabular-time text-tabular-time">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="">13:00 – 14:30</span>
+</div>
+<span class="px-space-8 py-space-2 rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm font-semibold">🌐 Remote / Online</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface mt-space-8 truncate">Communication Skills</h3>
+<div class="flex items-center justify-between mt-space-8 pt-space-8 bg-surface-container-highest/30 rounded px-space-8">
+<div class="flex items-center gap-space-4 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[18px]">videocam</span>
+<span class="">MS Teams (Link in Moodle)</span>
+</div>
+</div>
+</article>
+<!-- Event Card: Group 2 Lab -->
+<article class="relative flex flex-col bg-surface-container rounded-xl p-space-12 shadow-sm overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex items-center gap-space-4 text-secondary font-tabular-time text-tabular-time">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="">15:00 – 17:00</span>
+</div>
+<div class="flex items-center gap-space-4">
+<span class="px-space-8 py-space-2 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">💻 Lab / Tutorial (Lab)</span>
+<span class="px-space-8 py-space-2 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">Group 2</span>
+</div>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface mt-space-8 truncate">Programming 2 (Group 2)</h3>
+<div class="flex items-center gap-space-4 text-on-surface-variant font-label-md text-label-md mt-space-8 pt-space-8 bg-surface-container-highest/30 rounded px-space-8"><span class="material-symbols-outlined text-error text-[16px]">location_on</span><span class="">Computer Lab 104</span></div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- Day 3: Wednesday (Collapsible) -->
+<section class="day-accordion flex flex-col gap-space-8 rounded-2xl transition-all" data-day="wednesday">
+<button class="day-toggle w-full flex items-center justify-between p-space-12 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all text-left shadow-sm active:scale-[0.99]" type="button" aria-expanded="true" onclick="toggleDay(this)">
+<div class="flex items-center gap-space-8 min-w-0">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center font-title-sm text-title-sm">26</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Wednesday, Mar 26</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 lecture • 2 lab exercises</span>
+</div>
+</div>
+<div class="flex items-center gap-space-8">
+<span class="day-count-badge hidden px-space-8 py-space-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">2 classes</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200 chevron-icon">expand_less</span>
+</div>
+</button>
+<div class="day-content flex flex-col gap-space-8 pl-space-8 transition-all">
+<!-- Event Card: Group 2 Active -->
+<article class="relative flex flex-col bg-surface-container-low rounded-xl p-space-12 shadow-sm overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex items-center gap-space-4 text-secondary font-tabular-time text-tabular-time">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="">09:00 – 11:00</span>
+</div>
+<span class="px-space-8 py-space-2 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">💻 Lab / Tutorial (Lab)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface mt-space-8 truncate">Discrete Structures (Group 2)</h3>
+<div class="flex items-center gap-space-4 text-on-surface-variant font-label-md text-label-md mt-space-8 pt-space-8 bg-surface-container-highest/30 rounded px-space-8"><span class="material-symbols-outlined text-error text-[16px]">location_on</span><span class="">G2-Gama</span></div>
+</article>
+<!-- Event Card: Dimmed Group 3 -->
+<article class="relative flex flex-col bg-surface-container-lowest/60 rounded-xl p-space-12 opacity-40 shadow-sm overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline-variant"></div>
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex items-center gap-space-4 text-on-surface-variant font-tabular-time text-tabular-time">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="">11:15 – 13:00</span>
+</div>
+<span class="px-space-8 py-space-2 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Group 3 (Other study group)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface-variant mt-space-8 truncate">Discrete Structures (Group 3)</h3>
+<div class="flex items-center gap-space-4 text-on-surface-variant font-label-md text-label-md mt-space-4"><span class="material-symbols-outlined text-[16px]">meeting_room</span><span class="">G2-Gama</span></div>
+</article>
+</div>
+</section>
+
+<!-- Day 4: Thursday (Collapsible) -->
+<section class="day-accordion flex flex-col gap-space-8 rounded-2xl transition-all" data-day="thursday">
+<button class="day-toggle w-full flex items-center justify-between p-space-12 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all text-left shadow-sm active:scale-[0.99]" type="button" aria-expanded="true" onclick="toggleDay(this)">
+<div class="flex items-center gap-space-8 min-w-0">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center font-title-sm text-title-sm">27</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Thursday, Mar 27</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 class scheduled</span>
+</div>
+</div>
+<div class="flex items-center gap-space-8">
+<span class="day-count-badge hidden px-space-8 py-space-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">1 class</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200 chevron-icon">expand_less</span>
+</div>
+</button>
+<div class="day-content flex flex-col gap-space-8 pl-space-8 transition-all">
+<article class="relative flex flex-col bg-surface-container-low rounded-xl p-space-12 shadow-sm overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container"></div>
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex items-center gap-space-4 text-primary font-tabular-time text-tabular-time">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="">12:00 – 14:30</span>
+</div>
+<span class="px-space-8 py-space-2 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">📚 Lecture (L)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface mt-space-8 truncate">Computer Systems Architecture</h3>
+<div class="flex items-center gap-space-4 text-on-surface-variant font-label-md text-label-md mt-space-8 pt-space-8 bg-surface-container-highest/30 rounded px-space-8"><span class="material-symbols-outlined text-error text-[16px]">location_on</span><span class="">Auditorium</span></div>
+</article>
+</div>
+</section>
+
+<!-- Day 5: Friday (Collapsible) -->
+<section class="day-accordion flex flex-col gap-space-8 rounded-2xl transition-all" data-day="friday">
+<button class="day-toggle w-full flex items-center justify-between p-space-12 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all text-left shadow-sm active:scale-[0.99]" type="button" aria-expanded="true" onclick="toggleDay(this)">
+<div class="flex items-center gap-space-8 min-w-0">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center font-title-sm text-title-sm">28</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Friday, Mar 28</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 exam obligation</span>
+</div>
+</div>
+<div class="flex items-center gap-space-8">
+<span class="day-count-badge hidden px-space-8 py-space-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">1 exam</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200 chevron-icon">expand_less</span>
+</div>
+</button>
+<div class="day-content flex flex-col gap-space-8 pl-space-8 transition-all">
+<article class="relative flex flex-col bg-surface-container-low rounded-xl p-space-12 shadow-sm overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex items-center gap-space-4 text-tertiary font-tabular-time text-tabular-time">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="">10:00 – 11:30</span>
+</div>
+<span class="px-space-8 py-space-2 rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm font-semibold">📝 Midterm / Exam</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface mt-space-8 truncate">Discrete Structures (Midterm 1)</h3>
+<div class="flex items-center gap-space-4 text-on-surface-variant font-label-md text-label-md mt-space-8 pt-space-8 bg-surface-container-highest/30 rounded px-space-8"><span class="material-symbols-outlined text-error text-[16px]">location_on</span><span class="">G2-Alfa</span></div>
+</article>
+</div>
+</section>
+
+<!-- Day 6: Saturday (Collapsible) -->
+<section class="day-accordion flex flex-col gap-space-8 rounded-2xl transition-all" data-day="saturday">
+<button class="day-toggle w-full flex items-center justify-between p-space-12 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all text-left shadow-sm active:scale-[0.99]" type="button" aria-expanded="true" onclick="toggleDay(this)">
+<div class="flex items-center gap-space-8 min-w-0">
+<span class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant flex items-center justify-center font-title-sm text-title-sm">29</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Saturday, Mar 29</span>
+<span class="font-label-sm text-label-sm text-secondary">Weekend off</span>
+</div>
+</div>
+<div class="flex items-center gap-space-8">
+<span class="day-count-badge hidden px-space-8 py-space-2 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">Free</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200 chevron-icon">expand_less</span>
+</div>
+</button>
+<div class="day-content pl-space-8 transition-all">
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-16 flex flex-col items-center justify-center text-center gap-space-8 shadow-sm">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">coffee</span>
+</div>
+<div class="flex flex-col">
+<p class="font-title-sm text-title-sm text-on-surface">No scheduled events for this day</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Day 7: Sunday (Collapsible) -->
+<section class="day-accordion flex flex-col gap-space-8 rounded-2xl transition-all" data-day="sunday">
+<button class="day-toggle w-full flex items-center justify-between p-space-12 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all text-left shadow-sm active:scale-[0.99]" type="button" aria-expanded="true" onclick="toggleDay(this)">
+<div class="flex items-center gap-space-8 min-w-0">
+<span class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant flex items-center justify-center font-title-sm text-title-sm">30</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Sunday, Mar 30</span>
+<span class="font-label-sm text-label-sm text-secondary">Weekend off</span>
+</div>
+</div>
+<div class="flex items-center gap-space-8">
+<span class="day-count-badge hidden px-space-8 py-space-2 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">Free</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200 chevron-icon">expand_less</span>
+</div>
+</button>
+<div class="day-content pl-space-8 transition-all">
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-16 flex flex-col items-center justify-center text-center gap-space-8 shadow-sm">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">event_available</span>
+</div>
+<div class="flex flex-col"><p class="font-title-sm text-title-sm text-on-surface">No scheduled events for this day</p></div>
+</div>
+</div>
+</section>
+</div>
+<!-- Category Legend & Quick Help Card -->
+<aside class="mt-space-24 bg-surface-container rounded-xl p-space-16 shadow-md flex flex-col gap-space-12">
+<div class="flex items-center justify-between">
+<h4 class="font-title-sm text-title-sm text-on-surface flex items-center gap-space-4">
+<span class="material-symbols-outlined text-primary text-[18px]">palette</span>
+        Category Legend
+      </h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">UM Standard</span>
+</div>
+<!-- Badges Grid -->
+<div class="grid grid-cols-2 gap-space-8">
+<div class="flex items-center gap-space-8 bg-surface-container-low p-space-8 rounded-lg">
+<span class="w-3 h-3 rounded-full bg-primary-container shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">📚 Lecture (L)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Entire class cohort</span>
+</div>
+</div>
+<div class="flex items-center gap-space-8 bg-surface-container-low p-space-8 rounded-lg">
+<span class="w-3 h-3 rounded-full bg-secondary shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">💻 Lab Exercises (Lab)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lab or classroom</span>
+</div>
+</div>
+<div class="flex items-center gap-space-8 bg-surface-container-low p-space-8 rounded-lg">
+<span class="w-3 h-3 rounded-full bg-tertiary shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">📝 Seminar / Midterm</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Assessment &amp; exams</span>
+</div>
+</div>
+<div class="flex items-center gap-space-8 bg-surface-container-low p-space-8 rounded-lg">
+<span class="w-3 h-3 rounded-full bg-outline-variant shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Dimmed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Other study groups</span>
+</div>
+</div>
+</div>
+<!-- Quick Tip banner -->
+
+</aside>
+</div>
+<script>
+  // Simple micro-interactions for day headers
+  document.querySelectorAll('section button').forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.add('scale-[0.98]');
+      setTimeout(() => button.classList.remove('scale-[0.98]'), 120);
+    });
+  });
+</script></div></main><button id="fab-today" aria-label="Jump to Today" class="fixed bottom-20 right-4 z-50 inline-flex items-center gap-space-8 px-space-16 py-space-8 rounded-full bg-primary text-on-primary font-title-sm text-title-sm tracking-tight shadow-md hover:opacity-80 active:scale-95 transition-all" onclick="const todayEl = document.querySelector('#today-section') || document.querySelector('[data-today]') || document.body; todayEl.scrollIntoView({behavior: 'smooth', block: 'center'});"><span class="material-symbols-outlined text-[20px]">today</span><span class="font-semibold">Today</span></button><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.35)]" data-active-classes="text-primary font-semibold"><div class="max-w-7xl mx-auto flex justify-around items-center h-16 px-gutter-mobile"><a class="flex flex-col items-center justify-center gap-space-2 flex-1 min-w-touch-target-min h-touch-target-min text-on-surface-variant hover:text-on-surface transition-colors" data-path="timetable-day" href="#"><span class="material-symbols-outlined text-[22px]">calendar_today</span><span class="font-label-sm text-label-sm">Daily</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-2 flex-1 min-w-touch-target-min h-touch-target-min transition-colors text-primary font-semibold" data-path="timetable-week" href="#"><span class="material-symbols-outlined text-[22px]">calendar_view_week</span><span class="font-label-sm text-label-sm">Weekly</span></a><a class="flex flex-col items-center justify-center gap-space-2 flex-1 min-w-touch-target-min h-touch-target-min text-on-surface-variant hover:text-on-surface transition-colors" data-path="timetable-month" href="#"><span class="material-symbols-outlined text-[22px]">calendar_month</span><span class="font-label-sm text-label-sm">Monthly</span></a></div></nav>
+
+
+</body></html>

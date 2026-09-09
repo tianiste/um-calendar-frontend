@@ -3,14 +3,16 @@ export type CalendarName = string
 
 // what the generate-token returns
 export interface TokenResponse {
-    token: string
+  token: string
 }
 
 export interface CalendarEvent {
-    id: string
-    title: string
-    start: Date
-    end: Date
-    description?: string
-    location?: string
+  id: string
+  sourceId?: string
+  title: string
+  start: Date
+  end: Date
+  description?: string
+  location?: string
+  programme?: string
 }

@@ -1,0 +1,88 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><title>UM Calendar - Department Switcher</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#6ffbbe", "secondary-container": "#00a572", "error-container": "#93000a", "error": "#ffb4ab", "outline": "#8c909f", "on-secondary": "#003824", "on-error": "#690005", "on-secondary-fixed-variant": "#005236", "on-secondary-fixed": "#002113", "outline-variant": "#424754", "on-tertiary-fixed-variant": "#5516be", "secondary-fixed-dim": "#4edea3", "surface-container-low": "#131b2e", "surface-container-highest": "#2d3449", "on-primary-container": "#00285d", "on-tertiary-fixed": "#23005c", "primary-fixed-dim": "#adc6ff", "surface-container-lowest": "#060e20", "on-background": "#dae2fd", "on-error-container": "#ffdad6", "on-surface-variant": "#c2c6d6", "inverse-on-surface": "#283044", "primary-fixed": "#d8e2ff", "primary": "#adc6ff", "tertiary-fixed": "#e9ddff", "surface-variant": "#2d3449", "tertiary": "#d0bcff", "surface-dim": "#0b1326", "tertiary-container": "#a078ff", "on-tertiary-container": "#340080", "on-primary": "#002e6a", "surface": "#0b1326", "surface-container-high": "#222a3d", "on-secondary-container": "#00311f", "inverse-surface": "#dae2fd", "secondary": "#4edea3", "on-tertiary": "#3c0091", "tertiary-fixed-dim": "#d0bcff", "surface-tint": "#adc6ff", "background": "#0b1326", "on-primary-fixed-variant": "#004395", "on-surface": "#dae2fd", "surface-container": "#171f33", "surface-bright": "#31394d", "on-primary-fixed": "#001a42", "primary-container": "#4d8eff", "inverse-primary": "#005ac2" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-48": "3rem", "space-32": "2rem", "space-8": "0.5rem", "space-20": "1.25rem", "gutter-desktop": "1.25rem", "touch-target-min": "2.75rem", "space-16": "1rem", "space-2": "0.125rem", "space-24": "1.5rem", "gutter-mobile": "0.75rem", "space-4": "0.25rem", "space-12": "0.75rem" }, fontFamily: { "title-sm": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "tabular-time": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "display": ["Inter"], "headline-md": ["Inter"] }, fontSize: { "title-sm": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "tabular-time": ["13px", { "lineHeight": "16px", "letterSpacing": "0", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script></head><body class="bg-background text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)] pt-safe"><div class="h-16 max-w-7xl mx-auto px-gutter-mobile md:px-gutter-desktop flex items-center justify-between gap-space-12"><div class="flex items-center gap-space-8 min-w-0"><button aria-label="Go Back" class="w-touch-target-min h-touch-target-min -ml-space-8 rounded-xl hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-all" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="UM Calendar Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1V3YhVLrcg7TKGqMgN_0AHh0CHT6y5Hx_VOQv9Rhb0mWjl3kD5_UpoWP3juuGhFahOCy_bFkWaPhVjyACiqvUSs7j9brMeJ0c4zI3XhKZJBgX2Tz6pgVtNx2hmqPLBvF8nUd3H2Q0uYBRjL37xoYP0xJnkXHfLOl45_Gr6mG9UxQots1srU1LIyoBNts4ed382gh2XTMtOocyTZbKSGy9J-rHIY_BvluuN1XK2a2d5eRT5ns8GIrT0gcI2i"><div class="flex flex-col min-w-0"><span class="font-title-sm text-title-sm text-on-surface tracking-tight truncate">Select Study Programme</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">FERI Maribor • UM Calendar</span></div></div><div class="flex items-center gap-space-8 flex-shrink-0"><!-- Language Switcher --><div class="flex items-center p-1 rounded-xl bg-surface-container-high border border-outline-variant/30 text-label-sm font-label-sm"><button aria-label="Switch to English" class="px-2.5 py-1 rounded-lg bg-primary text-on-primary font-semibold shadow-xs transition-all" type="button">EN</button><span class="text-outline-variant/60 px-0.5">|</span><button aria-label="Switch to Slovenian" class="px-2.5 py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-all" type="button">SLO</button></div><button aria-label="Toggle Light/Dark Theme" class="w-touch-target-min h-touch-target-min rounded-xl bg-surface-container-high hover:bg-surface-container-highest active:scale-95 text-on-surface flex items-center justify-center transition-all" onclick="document.documentElement.classList.toggle('dark')" type="button"><span class="material-symbols-outlined text-[20px] dark:hidden">light_mode</span><span class="material-symbols-outlined text-[20px] hidden dark:inline-block">dark_mode</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-background"><div class="w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter-desktop flex-1 flex flex-col"><div class="flex flex-col w-full pb-space-32">
+<!-- Interactive State Switcher / Segmented Nav -->
+
+<!-- STATE 1: CALENDAR SELECTOR & SEARCH DRAWER -->
+<section class="flex flex-col gap-space-16 mt-space-8 transition-opacity duration-200" id="state-panel-1">
+<div class="flex items-center justify-between px-space-4">
+<div class="flex items-center gap-space-8">
+<span class="flex h-2.5 w-2.5 rounded-full bg-primary animate-pulse"></span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Select Study Programme</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">FERI Maribor Database</span>
+</div>
+<!-- Active Choice Chip Preview -->
+<div class="p-space-16 rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-8"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-secondary flex items-center gap-space-4"><span class="material-symbols-outlined text-[14px]">bookmark_added</span>Active Programme</span><span class="font-tabular-time text-tabular-time text-on-surface-variant">FERI • Acad. Year 2024/25</span></div><div class="flex items-start gap-space-12"><div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-[22px]">school</span></div><div class="flex flex-col min-w-0"><span class="font-title-sm text-title-sm text-on-surface truncate">Informatics and Communication Technologies (VS)</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">1st Year • Group VS-ITK-1 • Full-time</span></div></div></div>
+<!-- Search Box Card -->
+<div class="p-space-16 rounded-xl bg-surface-container flex flex-col gap-space-16 shadow-md">
+<div class="flex flex-col gap-space-8">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-space-4" for="search-input"><span class="material-symbols-outlined text-[16px] text-primary">search</span>Search for your study programme or year</label>
+<div class="relative flex items-center">
+<input class="w-full h-touch-target-min pl-space-12 pr-10 rounded-xl bg-surface-container-highest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/60 focus:outline-none focus:bg-surface-container-high transition-colors" id="search-input" placeholder="Search study programme (e.g. Computer Science, Telecommunications)..." type="text" value="Informatics and Communication Technologies (VS)">
+<button aria-label="Clear search" class="absolute right-space-8 w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Quick Faculty Filter Chips -->
+
+<!-- Search Result / Faculty Accordion List -->
+<div class="flex flex-col gap-space-8"><div class="p-space-12 rounded-xl bg-surface-container-highest text-on-surface shadow-sm flex items-center justify-between gap-space-12 relative overflow-hidden"><div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary rounded-l-xl"></div><div class="flex flex-col min-w-0 pl-space-4"><span class="font-title-sm text-title-sm text-primary flex items-center gap-space-4"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>Informatics and Communication Technologies (VS)</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">1st, 2nd, 3rd Year • Professional Programme</span></div><span class="font-label-sm text-label-sm px-space-8 py-space-2 rounded-full bg-secondary-container/20 text-secondary flex-shrink-0">Selected</span></div><button class="w-full text-left p-space-12 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors flex items-center justify-between gap-space-8" type="button"><div class="flex flex-col min-w-0"><span class="font-body-lg text-body-lg text-on-surface truncate">Computer Science and Information Technology</span><span class="font-body-sm text-body-sm text-on-surface-variant">1st, 2nd, 3rd Year • Academic &amp; Masters Programme</span></div><span class="material-symbols-outlined text-[20px] text-on-surface-variant">chevron_right</span></button><button class="w-full text-left p-space-12 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors flex items-center justify-between gap-space-8" type="button"><div class="flex flex-col min-w-0"><span class="font-body-lg text-body-lg text-on-surface truncate">Electrical Engineering (UN &amp; VS)</span><span class="font-body-sm text-body-sm text-on-surface-variant">Automation, Electronics, Power Engineering</span></div><span class="material-symbols-outlined text-[20px] text-on-surface-variant">chevron_right</span></button><button class="w-full text-left p-space-12 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors flex items-center justify-between gap-space-8" type="button"><div class="flex flex-col min-w-0"><span class="font-body-lg text-body-lg text-on-surface truncate">Media Communications (UN &amp; MAG)</span><span class="font-body-sm text-body-sm text-on-surface-variant">Visual Media, Graphic Production &amp; Journalism</span></div><span class="material-symbols-outlined text-[20px] text-on-surface-variant">chevron_right</span></button><button class="w-full text-left p-space-12 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors flex items-center justify-between gap-space-8" type="button"><div class="flex flex-col min-w-0"><span class="font-body-lg text-body-lg text-on-surface truncate">Telecommunications (UN &amp; MAG)</span><span class="font-body-sm text-body-sm text-on-surface-variant">Network Engineering, IoT &amp; Wireless Systems</span></div><span class="material-symbols-outlined text-[20px] text-on-surface-variant">chevron_right</span></button></div>
+</div>
+</section>
+<!-- STATE 2: LOADING & SKELETON STATE -->
+
+<!-- STATE 3: ERROR & OFFLINE STATE -->
+
+<!-- STATE 4: EMPTY STATE (VACATION / NO SESSIONS) -->
+
+<!-- UX Showcase Footer Quick Info -->
+
+</div>
+<script>
+  function switchState(stateNumber) {
+    // Hide all panels
+    for (let i = 1; i <= 4; i++) {
+      const panel = document.getElementById('state-panel-' + i);
+      const btn = document.getElementById('tab-btn-' + i);
+      if (panel) {
+        if (i === stateNumber) {
+          panel.classList.remove('hidden');
+          panel.classList.add('flex');
+        } else {
+          panel.classList.add('hidden');
+          panel.classList.remove('flex');
+        }
+      }
+      if (btn) {
+        if (i === stateNumber) {
+          btn.className = "h-touch-target-min flex flex-col items-center justify-center rounded-lg bg-primary text-on-primary shadow-sm transition-all text-center px-space-4";
+        } else {
+          btn.className = "h-touch-target-min flex flex-col items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all text-center px-space-4";
+        }
+      }
+    }
+  }
+
+  function simulateRetry() {
+    const icon = document.getElementById('retry-icon');
+    const label = document.getElementById('retry-label');
+    const btn = document.getElementById('retry-btn');
+    if (!icon || !label || !btn) return;
+
+    icon.classList.add('animate-spin');
+    label.innerText = 'Connecting...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      icon.classList.remove('animate-spin');
+      label.innerText = 'Try Again (Retry)';
+      btn.disabled = false;
+      // Switch gracefully to loading demo then to empty or success
+      switchState(2);
+    }, 1200);
+  }
+</script></div></main>
+<nav aria-label="Schedule Navigation" class="fixed bottom-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl border-t border-outline-variant/20 shadow-xl pb-safe"><div class="max-w-7xl mx-auto px-gutter-mobile md:px-gutter-desktop grid grid-cols-3 gap-space-4 py-space-4"><button class="h-touch-target-min flex flex-col items-center justify-center rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high active:scale-95 transition-all text-center px-space-8" type="button"><span class="material-symbols-outlined text-[22px]">calendar_today</span><span class="font-label-sm text-label-sm mt-space-2 truncate w-full">Daily</span></button><button class="h-touch-target-min flex flex-col items-center justify-center rounded-xl bg-primary-container/20 text-primary active:scale-95 transition-all text-center px-space-8 font-semibold shadow-sm" type="button"><span class="material-symbols-outlined text-[22px]">view_week</span><span class="font-label-sm text-label-sm mt-space-2 truncate w-full">Weekly</span></button><button class="h-touch-target-min flex flex-col items-center justify-center rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high active:scale-95 transition-all text-center px-space-8" type="button"><span class="material-symbols-outlined text-[22px]">calendar_month</span><span class="font-label-sm text-label-sm mt-space-2 truncate w-full">Monthly</span></button></div></nav>
+
+</body></html>

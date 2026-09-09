@@ -4,27 +4,32 @@ import { defineStore } from 'pinia'
 const THEME_STORAGE_KEY = 'um-calendar-theme'
 
 export const useThemeStore = defineStore('theme', () => {
-    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) as 'light' | 'dark' | null
-    const theme = ref<'light' | 'dark'>(savedTheme || 'light')
+  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) as 'light' | 'dark' | null
+  const theme = ref<'light' | 'dark'>(savedTheme === 'light' ? 'light' : 'dark')
 
-    watch(theme, (newTheme) => {
-        localStorage.setItem(THEME_STORAGE_KEY, newTheme)
+  watch(
+    theme,
+    (newTheme) => {
+      document
+        .querySelector('meta[name="theme-color"]')
+        ?.setAttribute('content', newTheme === 'dark' ? '#0b1326' : '#f4f6fc')
+      localStorage.setItem(THEME_STORAGE_KEY, newTheme)
 
-        if (newTheme === 'dark') {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    }, { immediate: true })
+      if (newTheme === 'dark') {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    },
+    { immediate: true },
+  )
 
-    function toggleTheme() {
-        console.log('Toggle clicked, current theme:', theme.value)
-        theme.value = theme.value === 'light' ? 'dark' : 'light'
-        console.log('New theme:', theme.value)
-    }
+  function toggleTheme() {
+    theme.value = theme.value === 'light' ? 'dark' : 'light'
+  }
 
-    return {
-        theme,
-        toggleTheme
-    }
+  return {
+    theme,
+    toggleTheme,
+  }
 })
