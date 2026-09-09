@@ -55,7 +55,11 @@ Production builds include a service worker that caches the complete app shell,
 allowing the page to reopen offline after the first online visit. Test this with
 `npm run build` followed by `npm run preview`; Vite development mode intentionally
 does not install a service worker. Offline reopening requires HTTPS or localhost
-and browser storage support. New app versions activate after existing app tabs close.
+and browser storage support. Page navigation tries the network first, then falls back
+to the saved shell while offline. Saved responses are reconstructed without redirect
+metadata because Cloudflare redirects `/index.html` to `/`. Cache-storage errors do
+not block online browsing. Worker updates activate immediately and retain previous
+shell caches for already-open tabs; programme and group preferences are unchanged.
 
 ## Install on a phone
 
