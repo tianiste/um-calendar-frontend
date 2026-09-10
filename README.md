@@ -4,6 +4,37 @@ A calendar viewer for University of Maribor class schedules. Browse your lecture
 
 ## Features
 
+### Mobile-minimalist testing branch
+
+`testing/mobile-minimalist` experiments with a compact layout below 700px. It does
+not change the production branch. Desktop keeps the expanded setup controls.
+
+- The programme summary and floating **Filters** button open the same native dialog.
+  Programmes, fuzzy search, group selection/reset, visibility, hide-other-groups and
+  the legend remain available. Programme changes still use **Show timetables** to apply.
+- Escape or **Done** closes the sheet and restores focus; background scrolling is
+  locked while it is open. The sheet scrolls independently and accounts for safe areas.
+- Sync details collapse normally, but errors/saved-data warnings stay expanded with
+  per-programme retry. Manual refresh remains beside the sync summary.
+- One compact current/next card expands to all ongoing classes and the next class.
+  Programme badges and conflict warnings remain visible. Daily totals expand to breaks.
+- Swipe schedule content or the date toolbar left/right to change dates. Swipe the
+  bottom navigation to change Day/Week/Month. Input fields, ordinary buttons, details,
+  vertical scrolling, multi-touch and screen-edge gestures are protected.
+- Date/view changes, button presses and sheet opening animate on mobile. Reduced-motion
+  preferences disable these animations. Arrow buttons and ordinary taps still work.
+- Offline caching, saved preferences, multiple programmes and overlap detection are unchanged.
+
+Manual test matrix: English/Slovenian at 320, 390 and 430px; desktop at 1200px;
+keyboard Escape/focus return; empty/failed/partial schedules; offline reopening;
+programme add/remove and independent groups; touch swipes and reduced motion.
+
+Run locally with `npm run dev` to use the development API proxy. Cloudflare preview
+hostnames may be blocked by the backend's origin allowlist even when a build succeeds;
+that does not affect local testing or change production's API configuration.
+
+### Existing capabilities
+
 - Month, week and day views
 - Dark mode support
 - Responsive design that works on phones and desktops
