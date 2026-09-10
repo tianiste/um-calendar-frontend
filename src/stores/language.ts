@@ -2,6 +2,13 @@ import { computed, ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 
 const english = {
+  mobileFilters: 'Filters',
+  closeFilters: 'Done',
+  filtersActive: 'Group filters active',
+  timetableSettings: 'Timetable settings',
+  syncDetails: 'Sync details',
+  classDetails: 'Class details',
+  currentClasses: 'Current classes',
   jumpDate: 'Jump to date',
   hideProgramme: 'Hide programme',
   showProgramme: 'Show programme',
@@ -105,6 +112,13 @@ const english = {
   swipeHint: 'Swipe left or right to change dates',
 } as const
 const slovenian: Record<keyof typeof english, string> = {
+  mobileFilters: 'Filtri',
+  closeFilters: 'Končano',
+  filtersActive: 'Aktivni filtri skupin',
+  timetableSettings: 'Nastavitve urnika',
+  syncDetails: 'Podrobnosti osveževanja',
+  classDetails: 'Podrobnosti dogodka',
+  currentClasses: 'Trenutni dogodki',
   jumpDate: 'Skoči na datum',
   hideProgramme: 'Skrij program',
   showProgramme: 'Prikaži program',

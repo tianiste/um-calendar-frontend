@@ -6,9 +6,13 @@ import { useCalendarStore } from '@/stores/calendar'
 import { useLanguageStore } from '@/stores/language'
 import AppIcon from './AppIcon.vue'
 import { programmeLabel } from '@/services/programmeLabel'
+import { useSwipeNavigation } from '@/composables/useSwipeNavigation'
 const schedule = useScheduleStore()
 const calendar = useCalendarStore()
 const i18n = useLanguageStore()
+const toolbarSwipe = useSwipeNavigation((direction) => schedule.move(direction), {
+  allowButtons: true,
+})
 const pickerOpen = ref(false)
 const dateInput = ref<HTMLInputElement | null>(null)
 const dateValue = computed(
@@ -37,7 +41,14 @@ const heading = computed(() => {
 })
 </script>
 <template>
-  <section class="overview panel">
+  <section
+    class="overview panel"
+    @touchstart.stop.passive="toolbarSwipe.touchStart"
+    @touchmove.stop.passive="toolbarSwipe.touchMove"
+    @touchend.stop.passive="toolbarSwipe.touchEnd"
+    @touchcancel.stop.passive="toolbarSwipe.cancel"
+    @click.capture="toolbarSwipe.click"
+  >
     <div class="overview-top">
       <div>
         <h2>

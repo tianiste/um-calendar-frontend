@@ -1,7 +1,11 @@
 import { ref } from 'vue'
 
-export function useSwipeNavigation(move: (direction: number) => void) {
+export function useSwipeNavigation(
+  move: (direction: number) => void,
+  options: { allowButtons?: boolean } = {},
+) {
   const swiped = ref(false)
+  let swipeEndedAt = 0
   let start: { x: number; y: number; time: number } | null = null
   function touchStart(event: TouchEvent) {
     swiped.value = false
@@ -10,7 +14,11 @@ export function useSwipeNavigation(move: (direction: number) => void) {
     start =
       event.touches.length === 1 &&
       touch &&
-      !target.closest('button, input, select, a, textarea, summary, details, [data-no-swipe]') &&
+      !target.closest(
+        options.allowButtons
+          ? 'input, select, a, textarea, summary, details, [data-no-swipe]'
+          : 'button, input, select, a, textarea, summary, details, [data-no-swipe]',
+      ) &&
       touch.clientX > 24 &&
       touch.clientX < window.innerWidth - 24
         ? { x: touch.clientX, y: touch.clientY, time: Date.now() }
@@ -28,6 +36,7 @@ export function useSwipeNavigation(move: (direction: number) => void) {
         dy = touch.clientY - start.y
       if (Math.abs(dx) >= 70 && Math.abs(dx) > Math.abs(dy) * 2 && Date.now() - start.time < 900) {
         swiped.value = true
+        swipeEndedAt = Date.now()
         move(dx < 0 ? 1 : -1)
       }
     }
@@ -37,11 +46,11 @@ export function useSwipeNavigation(move: (direction: number) => void) {
     start = null
   }
   function click(event: MouseEvent) {
-    if (swiped.value) {
+    if (swiped.value && Date.now() - swipeEndedAt < 450) {
       event.preventDefault()
       event.stopPropagation()
-      swiped.value = false
     }
+    swiped.value = false
   }
   return { touchStart, touchMove, touchEnd, cancel, click }
 }

@@ -7,11 +7,19 @@ import { useLanguageStore } from '@/stores/language'
 import { useScheduleStore, type CalendarView } from '@/stores/schedule'
 import AppIcon from '@/components/AppIcon.vue'
 import logo from '../design/stitch/logo.svg'
+import { useSwipeNavigation } from '@/composables/useSwipeNavigation'
 const theme = useThemeStore()
 const calendar = useCalendarStore()
 const i18n = useLanguageStore()
 const schedule = useScheduleStore()
 const views: CalendarView[] = ['day', 'week', 'month']
+const tabsSwipe = useSwipeNavigation(
+  (direction) => {
+    const index = Math.max(0, Math.min(views.length - 1, views.indexOf(schedule.view) + direction))
+    schedule.switchView(views[index]!)
+  },
+  { allowButtons: true },
+)
 const labels = { day: 'daily', week: 'weekly', month: 'monthly' } as const
 onMounted(() => calendar.loadSavedGroup())
 </script>
@@ -62,7 +70,15 @@ onMounted(() => calendar.loadSavedGroup())
       </div>
     </header>
     <RouterView />
-    <nav class="bottom-nav" :aria-label="i18n.t('navigation')">
+    <nav
+      class="bottom-nav"
+      :aria-label="i18n.t('navigation')"
+      @touchstart.passive="tabsSwipe.touchStart"
+      @touchmove.passive="tabsSwipe.touchMove"
+      @touchend.passive="tabsSwipe.touchEnd"
+      @touchcancel.passive="tabsSwipe.cancel"
+      @click.capture="tabsSwipe.click"
+    >
       <div>
         <button
           v-for="view in views"

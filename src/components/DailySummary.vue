@@ -3,6 +3,8 @@ import { computed } from 'vue'
 import { useCalendarStore } from '@/stores/calendar'
 import { useLanguageStore } from '@/stores/language'
 import { dailySummary } from '@/services/scheduleInsights'
+import { useMobile } from '@/composables/useMobile'
+const mobile = useMobile()
 const props = defineProps<{ date: Date }>()
 const calendar = useCalendarStore()
 const i18n = useLanguageStore()
@@ -14,7 +16,13 @@ const summary = computed(() =>
 )
 </script>
 <template>
-  <section class="panel daily-insights" :aria-label="i18n.t('dailySummary')">
+  <details class="panel daily-insights" :aria-label="i18n.t('dailySummary')" :open="!mobile">
+    <summary v-show="mobile">
+      {{ summary.count }} {{ i18n.t('events')
+      }}<template v-if="summary.finish">
+        · {{ i18n.t('finishes') }} {{ i18n.time(summary.finish) }}</template
+      >
+    </summary>
     <h3>{{ i18n.t('dailySummary') }}</h3>
     <p>
       {{ summary.count }} {{ i18n.t('events') }} · {{ summary.programmes }}
@@ -36,5 +44,5 @@ const summary = computed(() =>
       </ul>
     </details>
     <p v-else-if="summary.count">{{ i18n.t('noBreaks') }}</p>
-  </section>
+  </details>
 </template>
