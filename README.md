@@ -1,4 +1,7 @@
 # UM Calendar
+
+![UM Calendar demo](brag-output/um-calendar-mobile.gif)
+
 # [Link to page](https://um-calendar-frontend.pages.dev/)
 A calendar viewer for University of Maribor class schedules. Browse your lectures, exams, and other events in an easy-to-use interface.
 
